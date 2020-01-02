@@ -31,11 +31,7 @@ export default {
     },
 
     toggle() {
-      if(this.mode === 'dark'){
-        this.mode = 'light'
-      } else { 
-        this.mode = 'dark'
-      }
+      this.mode === 'dark' ? this.mode = 'light' : this.mode = 'dark'
     }
   }
 }
