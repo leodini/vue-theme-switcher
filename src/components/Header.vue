@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{ mode }} Mode</h1>
-        <!-- Toggle -->
+        <Toggle :mode="mode" @toggle="$emit('toggle')"/>
         <nav>
             <div class="nav-link">Home</div>
             <div class="nav-link">About</div>
@@ -12,8 +12,12 @@
 </template>
 
 <script>
+import Toggle from '@/components/Toggle'
 export default {
-    props: ['mode']
+    props: ['mode'],
+    components: {
+        Toggle
+    }
 }
 </script>
 
